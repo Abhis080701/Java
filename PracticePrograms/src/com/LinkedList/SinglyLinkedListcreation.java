@@ -13,7 +13,7 @@ public class SinglyLinkedListcreation {
     		 this.next = null;
     	 }
      }
-	public static void main()
+	public static void main(String []args)
 {
 	
 	SinglyLinkedListcreation s11 = new SinglyLinkedListcreation();
@@ -29,12 +29,16 @@ public class SinglyLinkedListcreation {
 	 * 
 	 * 
 	 */
+	
+	
    s11.first = second;
    second.next = third;
    third.next = fourth;
    fourth.next = null;
    
-   System.out.println("The Singly Linked List is:  "+second.next);
+   
+   System.out.println("The Singly Linked List is:  "+s11.first.data+"--->"+second.data+"--->"+third.data+"--->"+fourth.data);
+ // System.out.println(System.identityHashCode(second.next));
 	
 	
 }
