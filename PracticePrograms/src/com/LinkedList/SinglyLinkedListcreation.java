@@ -13,6 +13,30 @@ public class SinglyLinkedListcreation {
     		 this.next = null;
     	 }
      }
+     public void display()
+     {
+    	 LinkedList current = first;
+    	 while (current!=null) {
+	              System.out.print(current.data+"--->");
+	              current = current.next;
+		}
+    	 System.out.print("null");
+     }
+     
+     public  int length(){
+    	 if(first==null)
+    	 {
+    		return 0; 
+    	 }
+    	 int count = 0;
+    	 LinkedList current = first;
+    	 while (current!=null) {
+		
+		   count++;
+		   current = current.next;
+		}
+    	 return count;
+     }
 	public static void main(String []args)
 {
 	
@@ -31,13 +55,15 @@ public class SinglyLinkedListcreation {
 	 */
 	
 	
-   s11.first = second;
+   s11.first.next = second;
    second.next = third;
    third.next = fourth;
    fourth.next = null;
    
-   
-   System.out.println("The Singly Linked List is:  "+s11.first.data+"--->"+second.data+"--->"+third.data+"--->"+fourth.data);
+   s11.display();
+   System.out.println();
+   System.out.println("Length is: "+s11.length());
+  // System.out.println("The Singly Linked List is:  "+s11.first.data+"--->"+second.data+"--->"+third.data+"--->"+fourth.data);
  // System.out.println(System.identityHashCode(second.next));
 	
 	
