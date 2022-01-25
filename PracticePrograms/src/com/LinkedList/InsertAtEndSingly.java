@@ -45,12 +45,28 @@ public class InsertAtEndSingly {
     	System.out.print("null")		;
     	
     }
+    public int length()
+    {
+    	if(head==null)
+                 return 0;
+    	
+    	Node current = head;
+    	int count=0;
+    	while(current!=null)
+    	{
+    	   	count++;
+    	   	current = current.next;
+    	}
+    		return count;
+    }
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		InsertAtEndSingly I = new InsertAtEndSingly();
 		for(int i=0;i<=10;i++)
 		    	I.InsertAtEnd(i);
 		 I.Display();
+		 System.out.println();
+		System.out.println("The Length is: "+ I.length());
 		
 		
 		
